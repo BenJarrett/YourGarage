@@ -8,9 +8,6 @@ namespace YourGarage.Vehicles
 {
     class Watercraft : VehicleBase
     {
-        public int FuelCapacity { get; set; } = 50;
-        public string PassengerOccupancy { get; set; }
-
 
         public override void Refuel()
         {

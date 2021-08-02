@@ -8,10 +8,6 @@ namespace YourGarage.Vehicles
 {
     class Car : VehicleBase
     {
-        public int FuelCapacity { get; set; } = 50;
-        public string PassengerOccupancy { get; set; }
-
-
         public override void Refuel()
         {
             if (FuelCapacity <= 50)

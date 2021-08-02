@@ -9,8 +9,8 @@ namespace YourGarage.Vehicles
     class VehicleBase
     {
         public VehicleColor Color { get; set; }
-
-
+        public int FuelCapacity { get; set; } = 50;
+        public string PassengerOccupancy { get; set; }
 
         public virtual void Refuel()
         {
