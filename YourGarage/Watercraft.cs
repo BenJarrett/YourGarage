@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace YourGarage
 {
-    class Aircraft
+    class Watercraft
     {
         public int FuelCapacity { get; set; } = 50;
-        public AircraftColor Color { get; set; }
+        public WatercraftColor Color { get; set; }
         public string PassengerOccupancy { get; set; }
 
 
@@ -19,19 +19,19 @@ namespace YourGarage
             {
                 FuelCapacity = +50;
             }
-            Console.WriteLine($"Your aircraft is now at {FuelCapacity} %.");
+            Console.WriteLine($"Your watercraft is now at {FuelCapacity} %.");
         }
 
         public void Driving()
         {
-            Console.WriteLine($"The {Color} aircraft is flying freely in the sky.");
+            Console.WriteLine($"The {Color} watercraft has set sail.");
         }
 
         public void Landing()
         {
-            Console.WriteLine($"The {Color} aircraft landed on the runway.");
+            Console.WriteLine($"The {Color} watercraft has been docked.");
         }
-        public enum AircraftColor
+        public enum WatercraftColor
         {
             Black,
             Red,
@@ -39,4 +39,5 @@ namespace YourGarage
             Blue
         }
     }
+}
 }

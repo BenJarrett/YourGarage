@@ -19,7 +19,7 @@ namespace YourGarage
             {
                 BatteryCapacity = +50;
             }
-            Console.WriteLine($"Your car is not at {BatteryCapacity} %.");
+            Console.WriteLine($"Your car is now at {BatteryCapacity} %.");
         }
 
         public void Driving()
