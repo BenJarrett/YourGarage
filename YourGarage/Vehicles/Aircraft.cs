@@ -4,16 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace YourGarage
+namespace YourGarage.Vehicles
 {
-    class Aircraft
+    class Aircraft : VehicleBase
     {
         public int FuelCapacity { get; set; } = 50;
-        public AircraftColor Color { get; set; }
         public string PassengerOccupancy { get; set; }
 
 
-        public void Refuel()
+        public override void Refuel()
         {
             if (FuelCapacity <= 50)
             {
@@ -22,21 +21,14 @@ namespace YourGarage
             Console.WriteLine($"Your aircraft is now at {FuelCapacity} %.");
         }
 
-        public void Driving()
+        public override void Driving()
         {
             Console.WriteLine($"The {Color} aircraft is flying freely in the sky.");
         }
 
-        public void Landing()
+        public override void Landing()
         {
             Console.WriteLine($"The {Color} aircraft landed on the runway.");
-        }
-        public enum AircraftColor
-        {
-            Black,
-            Red,
-            White,
-            Blue
         }
     }
 }

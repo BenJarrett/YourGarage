@@ -4,16 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace YourGarage
+namespace YourGarage.Vehicles
 {
-    class Watercraft
+    class Watercraft : VehicleBase
     {
         public int FuelCapacity { get; set; } = 50;
-        public WatercraftColor Color { get; set; }
         public string PassengerOccupancy { get; set; }
 
 
-        public void Refuel()
+        public override void Refuel()
         {
             if (FuelCapacity <= 50)
             {
@@ -22,22 +21,16 @@ namespace YourGarage
             Console.WriteLine($"Your watercraft is now at {FuelCapacity} %.");
         }
 
-        public void Driving()
+        public override void Driving()
         {
             Console.WriteLine($"The {Color} watercraft has set sail.");
         }
 
-        public void Landing()
+        public override void Landing()
         {
             Console.WriteLine($"The {Color} watercraft has been docked.");
         }
-        public enum WatercraftColor
-        {
-            Black,
-            Red,
-            White,
-            Blue
-        }
+        
     }
 }
-}
+
